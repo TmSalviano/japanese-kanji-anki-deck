@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 wanikani_model = genanki.Model(
-    1607392319,  
+    1607392319,
     "WaniKani Kanji Detailed",
     fields=[
         {"name": "Subject_ID"},
@@ -109,35 +109,32 @@ wanikani_model = genanki.Model(
 )
 
 
-wanikani_deck = genanki.Deck(
-    2059400110,  
-    "WaniKani Kanji (Template)"
-)
+wanikani_deck = genanki.Deck(2059400110, "WaniKani Kanji (Template)")
 
 example_note = genanki.Note(
     model=wanikani_model,
     fields=[
-        "1",                                   
-        "水",                                  
-        "1",                                   
-        "water, Wednesday",                   
-        "",                                    
-        "すい, みず",                         
-        "This is the meaning mnemonic...",    
-        "This is the reading mnemonic...",     
-        "",                                    
-        "",                                    
-        "2,3,4",                              
-        "5,6",                                
-        "https://www.wanikani.com/kanji/水",  
-        "10",                                  
-        datetime.now().isoformat(),            
-        datetime.now().isoformat(),            
-        "",                                   
-        "1",                                  
-        "",                                   
-        "water"                               
-    ]
+        "1",
+        "水",
+        "1",
+        "water, Wednesday",
+        "",
+        "すい, みず",
+        "This is the meaning mnemonic...",
+        "This is the reading mnemonic...",
+        "",
+        "",
+        "2,3,4",
+        "5,6",
+        "https://www.wanikani.com/kanji/水",
+        "10",
+        datetime.now().isoformat(),
+        datetime.now().isoformat(),
+        "",
+        "1",
+        "",
+        "water",
+    ],
 )
 
 wanikani_deck.add_note(example_note)
@@ -145,7 +142,7 @@ wanikani_deck.add_note(example_note)
 
 package = genanki.Package(wanikani_deck)
 package.models = [wanikani_model]
-package.write_to_file('wanikani_kanji_template_with_example_toggle.apkg')
+package.write_to_file("wanikani_kanji_template_with_example_toggle.apkg")
 
 print("Arquivo gerado: 'wanikani_kanji_template_with_example.apkg'")
 print("Contém:")
